@@ -9,3 +9,9 @@
 ##### 示例
 [预览](http://localhost:10006/report/preview/one.ftl)
 [导出](http://localhost:10006/report/export/one.ftl)
+
+![img.png](img.png)
+
+![img_1.png](img_1.png)
+
+
