@@ -1,0 +1,5 @@
+spring:
+  application:
+    name: pdf-generator
+server:
+  port: 10006

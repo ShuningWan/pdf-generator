@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+
+    <conversionRule conversionWord="clr" converterClass="org.springframework.boot.logging.logback.ColorConverter"/>
+    <conversionRule conversionWord="wex" converterClass="org.springframework.boot.logging.logback.WhitespaceThrowableProxyConverter"/>
+    <conversionRule conversionWord="wEx" converterClass="org.springframework.boot.logging.logback.ExtendedWhitespaceThrowableProxyConverter"/>
+
+    <property name="LOG_PATTERN" value="%red(%d{yyyy-MM-dd HH:mm:ss.SSS}){faint} %green([%thread]) %clr(%X{traceId}){yellow} %highlight(%-5level) %boldMagenta(%logger{50}:%L) - %cyan(%msg%n${LOG_EXCEPTION_CONVERSION_WORD:-%wEx})"/>
+    <property name="LOG_FILE_PATTERN" value="%d{yyyy-MM-dd HH:mm:ss.SSS}{faint} [%thread] [%X{traceId}] %-5level %logger{50}:%L - %msg%n${LOG_EXCEPTION_CONVERSION_WORD:-%wEx}"/>
+
+    <appender name="StdoutAppender" class="ch.qos.logback.core.ConsoleAppender">
+        <withJansi>false</withJansi>
+        <encoder>
+            <pattern>${LOG_PATTERN}</pattern>
+            <charset>UTF-8</charset>
+        </encoder>
+    </appender>
+
+    <root level="INFO">
+        <appender-ref ref="StdoutAppender"/>
+    </root>
+
+    <logger name="xin.wanwork.generator" level="DEBUG"/>
+    <logger name="com.itextpdf.styledxmlparser.css.*" level="ERROR"/>
+
+</configuration>
+
